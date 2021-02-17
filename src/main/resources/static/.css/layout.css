@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    min-height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin:0 auto;
+    min-width: 600px;
+    width: 90%;
+    max-width: 1200px;
+    height:100vh;
+}
