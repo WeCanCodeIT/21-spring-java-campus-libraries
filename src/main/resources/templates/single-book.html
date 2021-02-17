@@ -1,7 +1,6 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <html lang="en">
+
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,13 +16,13 @@
         </header>
         <main>
           <h2 th:text="${book.title}">Head First Java</h2>
-          <h3>Kathy Sierra & Bert Bates</h3>
-          <img src="http://placekitten.com/200/300" alt="Cover Picture" />
-          <p>
+          <h3 th:text="${book.authorName}">Kathy Sierra & Bert Bates</h3>
+          <img th:src="${book.imageUrl}" src="http://placekitten.com/200/300" alt="Cover Picture" />
+          <p th:text="${book.description}">
             Good book, innovative at it publish date. Best selling book on Java
             ever.
           </p>
-          <a href="./columbus.html">Back to Columbus</a>
+          <a th:href="'/campuses/'+${book.campus.name}" href="./columbus.html" >Back to <span th:text="${book.campus.name}">Columbus</span></a>
         </main>
         <footer><small>&copy2021</small></footer>
       </div>
