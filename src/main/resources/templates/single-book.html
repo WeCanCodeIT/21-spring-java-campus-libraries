@@ -1,29 +1,32 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WCCI Libraries   </title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href=".css/layout.css">
-</head>
-<body>
-    <div class="container">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>WCCI Libraries</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href=".css/layout.css" />
+    </head>
+    <body>
+      <div class="container">
         <header>
-            <h1>We Can Code IT Libraries</h1>
+          <h1>We Can Code IT Libraries</h1>
         </header>
         <main>
-            <h2 th:text="${book.title}">Head First Java</h2>
-            <h3>Kathy Sierra & Bert Bates</h3>
-            <img src="http://placekitten.com/200/300" alt="Cover Picture">
-            <p>Good book, innovative at it publish date.  Best selling book on Java ever.</p>
-            <a href="./columbus.html">Back to Columbus</a>
+          <h2 th:text="${book.title}">Head First Java</h2>
+          <h3>Kathy Sierra & Bert Bates</h3>
+          <img src="http://placekitten.com/200/300" alt="Cover Picture" />
+          <p>
+            Good book, innovative at it publish date. Best selling book on Java
+            ever.
+          </p>
+          <a href="./columbus.html">Back to Columbus</a>
         </main>
         <footer><small>&copy2021</small></footer>
-    </div>
-</body>
+      </div>
+    </body>
+  </html>
 </html>
