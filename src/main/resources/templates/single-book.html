@@ -16,7 +16,9 @@
         </header>
         <main>
           <h2 th:text="${book.title}">Head First Java</h2>
-          <h3 th:text="${book.authorName}">Kathy Sierra & Bert Bates</h3>
+          <tr th:each="author : ${book.getAuthors()}">
+            <td><span th:text="${author.getFirstName() + ' ' + author.getLastName()}">first name</span><br></td>
+          </tr>
           <img th:src="${book.imageUrl}" src="http://placekitten.com/200/300" alt="Cover Picture" />
           <p th:text="${book.description}">
             Good book, innovative at it publish date. Best selling book on Java

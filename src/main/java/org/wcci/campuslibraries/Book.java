@@ -1,13 +1,36 @@
 package org.wcci.campuslibraries;
 
+import javax.persistence.*;
+import java.util.Collection;
+
+@Entity
 public class Book {
+    @Id
+    @GeneratedValue
+    private long id;
     private String title;
+
+    public Book() {
+
+    }
+
+    public Collection<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(Collection<Author> authors) {
+        this.authors = authors;
+    }
+
+    @ManyToMany
+    private Collection<Author> authors;
     private String authorName;
     private String imageUrl;
     private String description;
+    @ManyToOne
     private Campus campus;
 
-    public Book(String title, String authorName, String imageUrl, String description, Campus campus) {
+    public Book(String title, String imageUrl, String description, Campus campus) {
         this.title = title;
         this.authorName = authorName;
         this.imageUrl = imageUrl;
@@ -35,5 +58,9 @@ public class Book {
     public Campus getCampus() {
         return campus;
     }
+
+  /*  public void addAuthor(Author author){
+        this.authors.add(author);
+    }*/
 
 }
